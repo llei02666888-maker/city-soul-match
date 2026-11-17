@@ -108,9 +108,33 @@ const guards=[['rain','阴雨多、日照少'],['humid','闷热潮湿'],['cold',
 const cities={
  china:[
   ['成都',[60,55,38,68,60,78,72,58],['rain:high','humid:med','slow:med'], '烟火、松弛和文化供给都对你胃口；它适合把日子过得有来有往。'],['杭州',[52,62,65,55,62,55,75,77],['cost:high','commute:med'], '你会喜欢这里把自然、审美和向前走的劲儿放在同一张生活里。'],['厦门',[50,55,42,66,64,59,70,80],['humid:high','slow:med','cost:med'], '这里给你的不是热闹，而是每天都能呼吸到一点空白。'],['广州',[72,70,67,56,68,76,72,50],['humid:high','commute:med'], '你能在这里遇到人，也能用自己的方式过得很实在。'],['深圳',[68,78,82,43,75,48,68,52],['cost:high','crowded:med','humid:high'], '它更像一段主动出发的日子：快，但自由，也有很强的向前感。','气候数据：深圳 1991–2020 年常年平均日照为 1853 小时、年降水量 1932.9 毫米；86% 的雨量集中在 4–9 月。它不是“天天晴”，而是长夏、日照充足且湿热多雨的海滨城市。'],['苏州',[42,45,52,70,55,66,76,65],['slow:med','outsider:low'], '你会喜欢它细细铺开的秩序、审美和不必太喧哗的日常。'],['南京',[54,55,58,65,55,67,82,60],['humid:med'], '历史、文化和日常感不会互相打架，适合慢慢把生活过深。'],['重庆',[70,66,63,56,58,77,69,68],['humid:high','crowded:high','commute:high'], '它会给你很多真实的人气和夜晚，但也要求你接得住它的密度。'],['青岛',[50,52,48,70,57,60,65,77],['cold:med','slow:low'], '海风和稳定感都在，适合不想一直被生活催着跑的人。'],['长沙',[70,60,59,61,60,79,64,45],['humid:high'], '日常热闹却不生硬，尤其适合喜欢人间烟火的人。'],['昆明',[45,56,35,70,68,55,60,80],['slow:high'], '气候和自然会让你松下来，适合把自己重新养一养。'],['大理',[36,55,22,55,80,45,72,90],['slow:high','culture:low','outsider:med'], '山和湖会替你留出很多空间；更像一场生活方式选择。']
+  ,['北京',[76,82,88,42,64,42,96,42],['cost:high','crowded:high','commute:high','cold:med'], '它给你的是密度很高的机会、信息和文化；代价是节奏、通勤和居住成本都不会替你留情。'],
+  ['上海',[74,80,86,48,70,53,94,58],['cost:high','crowded:high','commute:high','humid:med'], '如果你想在效率、审美和国际化日常里保持向前，它会很合拍；但空间感和成本都要认真算。'],
+  ['武汉',[68,64,62,60,54,70,74,54],['humid:high','cold:med','crowded:med'], '江湖气、人情味和城市功能性都很足，适合能接受夏闷冬冷、也喜欢有烟火感日常的人。'],
+  ['西安',[55,61,50,64,51,63,90,57],['cold:med','slow:low'], '它的历史不是背景板，而会落在散步、吃饭和街巷里；适合想让生活有一点沉静纵深的人。'],
+  ['福州',[58,58,49,59,65,68,66,71],['humid:high','rain:high','slow:med'], '绿意和闽味很近，生活不会总是绷着；也要接受长夏、回南天和台风季的湿润。'],
+  ['泉州',[45,52,35,67,72,61,84,77],['humid:high','slow:med','boundary:med'], '它适合喜欢慢慢认识一座城市的人：宗教、旧街和海风都有，但熟人社会的边界感也更具体。'],
+  ['珠海',[42,55,40,67,70,58,60,82],['humid:high','slow:med','cost:high'], '海边的日常、绿地和低密度感很迷人；机会密度和雨热季的体感则是另一面。'],
+  ['贵阳',[45,52,36,65,64,50,62,70],['rain:high','humid:med','slow:med'], '夏天不那么灼人、山地就在身边，适合想从高压节奏里退半步的人；阴雨感也真实存在。'],
+  ['丽江',[32,50,20,58,82,36,74,88],['slow:high','cold:med','outsider:med'], '日照、高原和山景给它很强的恢复感；长期住要同时接受干燥、温差和旅游城市的季节性。'],
+  ['海口',[45,56,31,62,76,66,57,84],['humid:high','rain:high','slow:med'], '热带绿意和海风让日常更轻，但长夏、高湿、强降雨和台风并不是旅行滤镜能省略的部分。'],
+  ['哈尔滨',[48,55,48,66,46,33,65,55],['cold:high','distant:med'], '冬天很有存在感，夏天却舒服得难得；适合真的喜欢季节反差、也不怕长冬的人。'],
+  ['乌鲁木齐',[43,53,48,61,58,41,64,76],['cold:high','distant:high'], '阳光、干燥和开阔感很鲜明，适合需要空间与自然边界的人；距离与冬季成本也必须算进去。']
  ],
  world:[
   ['巴黎',[70,75,70,45,68,48,95,42],['cost:high','crowded:med','outsider:med'], '这里给你的是密集的文化和表达欲，也要求你接受一点复杂与锋利。'],['伦敦',[72,78,76,45,76,46,90,50],['cost:high','rain:high','commute:high'], '你可以在这里保持不同，也总能找到新的展览、音乐和人。'],['巴塞罗那',[68,68,52,53,70,63,85,78],['cost:high','humid:med','crowded:med'], '海边、设计和晚间生活，会把你的感官慢慢打开。'],['东京',[55,72,82,68,55,60,89,48],['cost:high','crowded:high','commute:high'], '秩序和文化供给都很强，适合愿意认真把生活过出细节的人。'],['京都',[40,52,38,73,55,58,92,70],['slow:med','culture:low'], '它给你季节、手艺和安静的美，适合不急着证明什么的时候。'],['墨尔本',[56,69,58,63,72,58,84,67],['cost:high'], '你会喜欢这里随性但不松散的文化日常，生活可以很有自己的节拍。'],['哥本哈根',[48,57,55,75,70,55,78,65],['cost:high','cold:high','distant:med'], '它把秩序和个人空间照顾得很好，也适合想把日常过得干净的人。'],['里斯本',[62,65,45,55,72,55,74,75],['cost:high','slow:med'], '海风、坡道和慢一点的街头，会让你愿意把时间花在生活上。'],['阿姆斯特丹',[66,73,63,57,78,45,81,62],['cost:high','rain:med','outsider:med'], '自由和边界感能在这里并存，适合不想按同一种方式活的人。'],['温哥华',[45,65,46,58,75,42,72,90],['cost:high','rain:high','distant:med'], '山海离日常很近，适合需要自然和清晰个人空间的人。'],['纽约',[82,85,88,38,85,42,96,38],['cost:high','crowded:high','commute:high'], '它会放大你的野心和好奇心，也不会替你把生活过轻松。'],['罗马',[68,58,42,55,64,71,95,65],['outsider:med','commute:med'], '在这里，历史、食物和街道都很具体，生活更像一场长谈。']
+  ,['首尔',[71,74,80,57,63,54,88,52],['crowded:high','commute:high','cold:med'], '它适合喜欢城市密度、流行文化和随时有事发生的人；高房价、通勤与夏季雨热也都是真实条件。'],
+  ['新加坡',[73,79,79,55,76,70,82,63],['humid:high','rain:high','cost:high'], '安全、效率和多元文化很强，但全年闷热多雨、居住成本高，不能只看“方便”两个字。'],
+  ['柏林',[62,74,59,59,76,44,86,64],['cold:high','distant:med','outsider:med'], '它给创作和不合群的人留了余地；冬季日照短、社交建立慢，是长期生活里绕不开的一面。'],
+  ['维也纳',[48,59,54,74,64,51,90,66],['cold:med','cost:high','slow:med'], '秩序、古典文化与日常安全感都很强，适合想把生活过得稳定又不无聊的人。'],
+  ['悉尼',[66,73,65,57,77,61,83,78],['cost:high','distant:high'], '海滩、阳光和户外感会让你更愿意出门；但住房成本高、与国内的距离也很具体。'],
+  ['奥克兰',[50,63,44,66,79,49,71,86],['rain:high','cost:high','distant:high','slow:med'], '自然贴得很近，生活也有呼吸感；想要高密度文化活动或讨厌阴雨的人，要把这点算进去。'],
+  ['旧金山',[61,82,67,54,80,43,87,76],['cost:high','cold:med','crowded:med'], '它适合好奇心强、愿意在科技和多元社群里找位置的人；微凉、多雾和高房租都是真实日常。'],
+  ['洛杉矶',[66,76,61,47,80,55,82,84],['cost:high','commute:high','distant:med'], '阳光与创意行业会放大你的行动感，但车依赖、通勤和分散的城市结构也需要适应。'],
+  ['蒙特利尔',[59,69,57,64,73,41,84,61],['cold:high','distant:med','outsider:med'], '文化、食物和相对可负担的城市感很迷人；但漫长寒冬与法语环境应该被提前纳入选择。'],
+  ['佛罗伦萨',[54,55,39,59,61,64,94,62],['cost:high','crowded:med','slow:med'], '艺术和步行尺度能让日常很有质感；旅游季人流、就业面与旧城生活成本也要一并看。'],
+  ['大阪',[70,71,74,61,59,64,84,56],['crowded:high','commute:high','humid:med'], '它比东京更有烟火和松动感，吃喝与文化供给很稳定；但夏季湿热、城市密度和日语门槛都在。'],
+  ['塞维利亚',[60,56,43,56,69,49,80,73],['slow:med','cost:med'], '阳光、广场和晚间生活很有感染力；盛夏酷热与就业机会密度较低，是不能省略的条件。']
  ]
 };
 const climateFacts={
@@ -139,13 +163,39 @@ const climateFacts={
  '纽约':'常年气候约：日照约 2,535 小时／年，年降水约 1,268 毫米。四季和文化密度都强，同样强的是房租、通勤和节奏。',
  '罗马':'常年气候约：日照约 2,473 小时／年，年降水约 798 毫米。夏季炎热干燥、冬季较温和，旅游中心与真实居住区体验差异很大。'
 };
+Object.assign(climateFacts,{
+ '北京':'客观条件：降水高度集中在夏季，冬季晴冷且干燥；历史气候资料显示 7–8 月是主要雨季，冬季日照相对更多。长期住要把雾霾治理波动、冬季低温与通勤成本一起考虑。',
+ '上海':'客观条件：梅雨、夏季闷热和台风影响是真实的居住条件；全年降水分布较广，夏季湿热明显。',
+ '武汉':'客观条件：夏季高温湿热、冬季湿冷是常见体感；年降水主要集中在暖季，不适合把干爽作为硬条件的人。',
+ '西安':'客观条件：四季温差大、冬季偏冷干，暖季降水增多；比东南沿海更干爽，但沙尘和冬季空气条件也需考虑。',
+ '福州':'客观条件：亚热带湿润气候，暖湿期长，强降雨和台风季会影响日常安排；不把湿热雨季浪漫化才是准确选择。',
+ '泉州':'客观条件：沿海湿热、台风季和夏秋强降雨均需考虑；冬季相对温和，适合接受海洋性湿润的人。',
+ '珠海':'客观条件：全年温暖、夏半年湿热多雨，台风和强对流天气会影响生活；自然条件好不等于全年干爽。',
+ '贵阳':'客观条件：夏季较凉，但阴雨、湿度和日照偏少感更突出；适合避暑，不适合把晴天和干燥当刚需。',
+ '丽江':'客观条件：高原日照强、昼夜温差大、空气偏干；雨季集中在暖季，高原反应与紫外线防护都属于现实条件。',
+ '海口':'客观条件：热带海洋性气候，湿度高、雨季与台风季明确；冬季温暖不代表全年都舒适干爽。',
+ '哈尔滨':'客观条件：冬季漫长严寒，室内供暖与冰雪天气会显著影响出行；夏季短而相对凉爽。',
+ '乌鲁木齐':'客观条件：大陆性干冷，年降水较少、昼夜和季节温差大；冬季严寒、距离成本和干燥体感要提前评估。',
+ '首尔':'客观条件：夏季雨季明显、冬季寒冷干燥；高密度通勤与住房成本是生活方式匹配之外的硬条件。',
+ '新加坡':'客观条件：赤道气候，全年高温高湿、对流雨频繁；空调依赖和高生活成本是日常而非例外。',
+ '柏林':'客观条件：冬季日照短、偏冷，降水全年较平均；适合接受季节低光照和较慢社交节奏的人。',
+ '维也纳':'客观条件：四季分明，冬季冷、夏季可热；公共交通完善，但居住成本和签证就业条件需要另行判断。',
+ '悉尼':'客观条件：四季较温和但存在热浪、山火烟霾和强降雨风险；高住房成本与远距离迁移成本同样重要。',
+ '奥克兰':'客观条件：温和海洋性气候但雨日较多、天气变化快；不是“永远晴朗”的海岛城市。',
+ '旧金山':'客观条件：夏季常有海雾与偏凉体感，冬雨夏干明显；高房租与社区差异对长期生活影响很大。',
+ '洛杉矶':'客观条件：整体干晴，但夏秋高温、山火烟霾与车依赖是现实；城市并非处处都适合步行。',
+ '蒙特利尔':'客观条件：冬季严寒且雪期长，夏季温暖湿润；法语在生活和工作中的实际使用要提前评估。',
+ '佛罗伦萨':'客观条件：夏季可炎热、旅游高峰明显；历史中心生活便利但房源、噪声与旅游人流不是小问题。',
+ '大阪':'客观条件：夏季湿热、梅雨和台风影响存在；轨道通勤便利但人口密度和语言门槛需要接受。',
+ '塞维利亚':'客观条件：夏季高温极其突出，日常安排会围绕避暑调整；阳光充足并不等于全年体感舒适。'
+});
 let index=0,answers=Array(q.length).fill(null),chosen=[];
 const byId=id=>document.getElementById(id); const screens=['intro','quiz','guardrails','result'];
 function show(id){screens.forEach(x=>byId(x).classList.toggle('active',x===id));if(id==='intro')byId('intro').style.display='grid';else byId('intro').style.display='none';window.scrollTo(0,0)}
 function renderQuestion(){window.scrollTo({top:0,left:0,behavior:'auto'});const item=q[index];byId('count').textContent=`${index+1} / ${q.length}`;byId('bar').style.width=`${((index+1)/q.length)*100}%`;byId('qnumber').textContent=`LIFE MOMENT ${String(index+1).padStart(2,'0')}`;byId('question').textContent=item[0];byId('options').innerHTML=item[1].map((t,i)=>`<button class="option ${answers[index]===i?'selected':''}" data-i="${i}"><span class="letter">${'ABCD'[i]}</span>${t}</button>`).join('');document.querySelectorAll('.option').forEach(b=>b.onclick=()=>{answers[index]=+b.dataset.i;if(index<q.length-1){index++;renderQuestion()}else{window.scrollTo({top:0,left:0,behavior:'auto'});renderGuards();show('guardrails')}});byId('back').style.visibility=index?'visible':'hidden'}
 function renderGuards(){byId('guardGrid').innerHTML=guards.map(([key,label])=>`<button type="button" class="guard ${chosen.includes(key)?'checked':''}" data-key="${key}">${label}<small>${chosen.includes(key)?'已选择':'点击选择'}</small></button>`).join('');document.querySelectorAll('.guard').forEach(b=>b.onclick=()=>{const key=b.dataset.key;if(chosen.includes(key))chosen=chosen.filter(x=>x!==key);else if(chosen.length<3)chosen.push(key);else{byId('guardWarning').textContent='最多选 3 项，把最不能将就的留给自己。';return}byId('guardWarning').textContent='';renderGuards()});byId('severity').classList.toggle('show',chosen.length>0);byId('severity').innerHTML=chosen.length?'<strong>这些对你来说是：</strong>'+chosen.map(key=>`<label><input type="radio" name="sev-${key}" value="soft" checked> 不喜欢，但可以适应　 <input type="radio" name="sev-${key}" value="hard"> 长期这样，我会不想住下去</label>`).join(''):''}
-function userProfile(){let v={S:50,X:50,P:50,A:50,F:50,H:50,C:50,N:50},e={W:0,R:0,T:0,J:0,U:0};answers.forEach((a,i)=>q[i][2+a].forEach(([k,n])=>{if(k in v)v[k]+=n;else e[k]+=n}));dims.forEach(k=>v[k]=Math.max(15,Math.min(85,50+(v[k]-50)*1.65)));return{v,e}}
-function rank(group,profile){let hard={};chosen.forEach(key=>{const r=document.querySelector(`input[name="sev-${key}"]:checked`);hard[key]=r?r.value:'soft'});const weights={P:1.6,A:1.5,S:1.4,N:1.4,X:1.2,F:1.1,C:1,H:.8};let list=cities[group].map(c=>{let diff=dims.reduce((sum,d,i)=>sum+Math.abs(profile.v[d]-c[1][i])*weights[d],0);let signature=dims.reduce((sum,d,i)=>sum+(profile.v[d]-50)*(c[1][i]-50)*weights[d],0);let score=100-diff*.17+signature*.018,excluded=false,penalty=0;c[2].forEach(s=>{let [key,level]=s.split(':');if(!hard[key])return;let val={low:1,med:5,high:10}[level];if(hard[key]==='hard'&&(level==='med'||level==='high'))excluded=true;else penalty+=hard[key]==='soft'?val:(level==='low'?3:0)});return{c,score:Math.round(Math.max(1,score-penalty)),raw:score-penalty,excluded}});let candidates=(list.filter(x=>!x.excluded).length?list.filter(x=>!x.excluded):list).sort((a,b)=>b.raw-a.raw);let pool=candidates.filter(x=>x.raw>=candidates[0].raw-1.5);let hash=answers.reduce((n,a,i)=>(n*31+(a+1)*(i+7))>>>0,17);return pool[hash%pool.length]}
+function userProfile(){let v={S:50,X:50,P:50,A:50,F:50,H:50,C:50,N:50},e={W:0,R:0,T:0,J:0,U:0};answers.forEach((a,i)=>q[i][2+a].forEach(([k,n])=>{if(k in v)v[k]+=n;else e[k]+=n}));dims.forEach(k=>{const typical=q.reduce((sum,item)=>sum+item.slice(2).reduce((optionSum,option)=>optionSum+(option.find(x=>x[0]===k)?.[1]||0),0)/4,0);v[k]=Math.max(15,Math.min(85,50+(v[k]-50-typical)*2.1))});return{v,e}}
+function rank(group,profile){let hard={};chosen.forEach(key=>{const r=document.querySelector(`input[name="sev-${key}"]:checked`);hard[key]=r?r.value:'soft'});const weights={P:1.6,A:1.5,S:1.4,N:1.4,X:1.2,F:1.1,C:1,H:.8};const intensity=dims.reduce((sum,d)=>sum+Math.abs(profile.v[d]-50),0)/dims.length;let list=cities[group].map(c=>{let diff=dims.reduce((sum,d,i)=>sum+Math.abs(profile.v[d]-c[1][i])*weights[d],0);let signature=dims.reduce((sum,d,i)=>sum+(profile.v[d]-50)*(c[1][i]-50)*weights[d],0);let character=c[1].reduce((sum,n)=>sum+Math.abs(n-50),0)/dims.length;let score=100-diff*.17+signature*.018+intensity*character*.012,excluded=false,penalty=0;c[2].forEach(s=>{let [key,level]=s.split(':');if(!hard[key])return;let val={low:1,med:5,high:10}[level];if(hard[key]==='hard'&&(level==='med'||level==='high'))excluded=true;else penalty+=hard[key]==='soft'?val:(level==='low'?3:0)});return{c,score:Math.round(Math.max(1,score-penalty)),raw:score-penalty,excluded}});let candidates=(list.filter(x=>!x.excluded).length?list.filter(x=>!x.excluded):list).sort((a,b)=>b.raw-a.raw);let pool=candidates.filter(x=>x.raw>=candidates[0].raw-6);let hash=answers.reduce((n,a,i)=>(n*31+(a+1)*(i+7))>>>0,17);return pool[hash%pool.length]}
 const names={S:'社交热度',X:'新鲜探索',P:'生活节奏',A:'稳定安心',F:'个人空间',H:'烟火归属',C:'文化审美',N:'自然呼吸'};
 const poles={S:['独处充电','人群充电'],X:['熟悉路线','新鲜探索'],P:['留白松弛','高效向前'],A:['变化也行','稳定安心'],F:['亲密陪伴','个人空间'],H:['保持距离','烟火归属'],C:['实用日常','文化审美'],N:['城市密度','自然呼吸']};
 const pct=v=>Math.round((v-20)/.6);
