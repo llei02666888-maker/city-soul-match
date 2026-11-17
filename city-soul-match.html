@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>城市灵魂匹配计划</title>
+  <style>
+    :root{--ink:#24221e;--paper:#f9f5ee;--cream:#f1e9dc;--rose:#b96961;--wine:#834b51;--sage:#667360;--mist:#ddd6ca;--gold:#be9253;--bar-left:#d7d5d1;--bar-right:#ad6f70}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:"YouYuan","Microsoft YaHei UI","Microsoft YaHei",ui-rounded,sans-serif;letter-spacing:.015em}.app{min-height:100vh;overflow:hidden}.hero{min-height:100vh;display:grid;place-items:center;padding:28px;background:linear-gradient(145deg,rgba(23,28,31,.15),rgba(99,48,43,.22)),url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=85') center/cover}.intro{width:min(650px,100%);padding:44px 32px;background:rgba(251,247,239,.91);text-align:center;box-shadow:0 18px 50px rgba(52,35,27,.16)}.eyebrow{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}h1{font-size:clamp(35px,7vw,58px);font-weight:500;line-height:1.14;margin:16px 0 14px}h2{font-weight:500;font-size:30px;line-height:1.35;margin:0 0 12px}.intro p,.sub{font-size:16px;line-height:1.9;color:#575149;margin:0 auto 28px;max-width:450px}.button{border:0;background:var(--wine);color:#fff;padding:15px 26px;font:inherit;cursor:pointer;letter-spacing:.08em}.button:hover{background:#68363c}.button.secondary{background:transparent;color:var(--wine);border:1px solid var(--wine)}.screen{display:none;max-width:720px;margin:0 auto;padding:28px 20px 48px}.screen.active{display:block}.topline{display:flex;justify-content:space-between;align-items:center;font-family:Arial,sans-serif;font-size:12px;color:#6d665d;letter-spacing:.08em;margin:0 0 12px}.progress{height:3px;background:var(--mist);margin-bottom:38px}.progress i{display:block;height:100%;background:var(--wine);transition:width .3s}.question-card{padding:8px 0}.question-number{font-family:Arial,sans-serif;color:var(--wine);font-size:12px;letter-spacing:.15em;margin-bottom:12px}.question{font-size:clamp(25px,5vw,37px);line-height:1.45;margin:0 0 28px;font-weight:500}.options{display:grid;gap:11px}.option{width:100%;text-align:left;border:1px solid #d9d0c3;background:#fffdfa;padding:18px 18px;font:inherit;font-size:17px;line-height:1.6;cursor:pointer;transition:.2s}.option:hover,.option.selected{border-color:var(--wine);background:#f8eeea}.letter{font-family:Arial,sans-serif;font-size:12px;display:inline-block;color:var(--wine);margin-right:12px}.nav{display:flex;justify-content:space-between;align-items:center;margin-top:26px}.back{border:0;background:none;color:#756a60;font:inherit;cursor:pointer;padding:10px 0}.guard-intro{background:var(--cream);padding:28px;margin:0 0 24px}.guard-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.guard{background:#fffdfa;border:1px solid #ddd3c7;padding:14px;font:inherit;text-align:left;line-height:1.5;cursor:pointer}.guard.checked{border-color:var(--wine);background:#f8eeea}.guard small{display:block;color:#756a60;margin-top:5px}.severity{display:none;margin:17px 0 8px;padding:15px;background:#f5eee5}.severity.show{display:block}.severity label{display:block;margin:9px 0;font-size:15px}.warning{color:#9c3e3e;font-size:14px;min-height:20px;margin-top:14px}.result{max-width:860px;padding-top:30px}.result-hero{position:relative;min-height:405px;color:#fff;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(0deg,rgba(22,19,17,.76),rgba(22,19,17,.04)),url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1600&q=85') center/cover}.result-hero:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);pointer-events:none}.result-hero>*{position:relative}.result-title{font-size:clamp(36px,8vw,61px);line-height:1.1;margin:8px 0;font-weight:500}.result-kicker{font-family:Arial,sans-serif;letter-spacing:.14em;font-size:11px}.tagline{font-size:18px;line-height:1.8;max-width:520px;margin:6px 0 0}.report{padding:34px 0}.report h3{font-size:21px;font-weight:500;margin:34px 0 13px}.report p{font-size:16px;line-height:1.9;margin:0}.city-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}.city-card{background:#fffdfa;padding:24px;position:relative;overflow:hidden}.city-card:after{content:"";position:absolute;width:90px;height:90px;border:1px solid var(--gold);border-radius:50%;right:-30px;top:-30px}.city-label{font:11px Arial,sans-serif;letter-spacing:.13em;color:var(--wine)}.city-name{font-size:31px;margin:10px 0 5px}.score{font:13px Arial,sans-serif;color:#72675d}.city-card p{font-size:15px;margin-top:15px}.wednesday{background:var(--sage);color:#fff;padding:28px;margin-top:28px}.wednesday h3{margin-top:0}.quote{padding:32px 18px;text-align:center;font-size:24px;line-height:1.7;color:var(--wine)}.keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.keywords span{padding:7px 11px;border:1px solid var(--gold);font-size:14px}.scales{display:grid;gap:17px;margin-top:18px}.scale-head{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;font-size:13px;color:#72675d}.scale-head span:last-child{text-align:right}.scale-head b{font-size:13px;color:var(--ink);font-weight:500}.scale-bar{height:11px;margin-top:7px;background:linear-gradient(90deg,var(--bar-left) 0 calc(100% - var(--right)),var(--bar-right) calc(100% - var(--right)) 100%);position:relative}.scale-bar:after{content:"";position:absolute;left:calc(100% - var(--right));top:-4px;width:2px;height:19px;background:var(--ink)}.weather-note{font-size:13px!important;color:#72675d;margin-top:10px!important}.evidence{padding:23px 24px;background:var(--cream);margin-top:18px}.evidence ul{margin:10px 0 0;padding-left:21px}.evidence li{line-height:1.8;margin:7px 0;font-size:15px}.source-note{font-size:12px!important;color:#776f67;margin-top:14px!important}.disclaimer{font-size:12px!important;color:#776f67;margin-top:30px!important}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:560px){.intro{padding:38px 23px}.guard-grid,.city-grid{grid-template-columns:1fr}.result-hero{min-height:360px;padding:28px 24px}.screen{padding:22px 16px 40px}.question{font-size:27px}.option{font-size:16px;padding:15px}.quote{font-size:21px}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <section class="hero" id="intro">
+    <div class="intro">
+      <div class="eyebrow">City Soul Matching Plan</div>
+      <h1>城市灵魂<br>匹配计划</h1>
+      <p>18 个生活瞬间，看看哪座中国城市和哪座世界城市，更像你会想留下来的地方。</p>
+      <button class="button" id="start">开始测试</button>
+      <p style="font-size:12px;margin:16px auto 0">约 3 分钟 · 趣味生活方式测验</p>
+    </div>
+  </section>
+
+  <section class="screen" id="quiz">
+    <div class="topline"><span>城市灵魂匹配计划</span><span id="count"></span></div>
+    <div class="progress"><i id="bar"></i></div>
+    <div class="question-card">
+      <div class="question-number" id="qnumber"></div>
+      <h2 class="question" id="question"></h2>
+      <div class="options" id="options"></div>
+    </div>
+    <div class="nav"><button class="back" id="back">← 上一题</button><span></span></div>
+  </section>
+
+  <section class="screen" id="guardrails">
+    <div class="topline"><span>最后一步</span><span>避雷确认</span></div>
+    <div class="progress"><i style="width:100%"></i></div>
+    <div class="guard-intro"><h2>别替我硬配</h2><p class="sub" style="margin:0">有些事不是不喜欢，是住久了真的会后悔。选出最多 3 项你最不想长期将就的事。</p></div>
+    <div class="guard-grid" id="guardGrid"></div>
+    <div class="severity" id="severity"></div>
+    <div class="warning" id="guardWarning"></div>
+    <div class="nav"><button class="back" id="guardBack">← 回到题目</button><button class="button" id="finish">看看结果</button></div>
+  </section>
+
+  <section class="screen result" id="result">
+    <div class="result-hero">
+      <div class="result-kicker">YOUR CITY SOUL</div>
+      <div class="result-title" id="archetype"></div>
+      <p class="tagline" id="lead"></p>
+    </div>
+    <div class="report">
+      <h3>你在找怎样的生活</h3><p id="need"></p>
+      <div class="keywords" id="keywords"></div>
+      <h3>你的城市偏好坐标</h3>
+      <div class="scales" id="scales"></div>
+      <p class="weather-note" id="weatherNote"></p>
+      <h3>最适合你的两座城市</h3>
+      <div class="city-grid">
+        <article class="city-card"><div class="city-label">中国城市</div><div class="city-name" id="cnName"></div><div class="score" id="cnScore"></div><p id="cnWhy"></p></article>
+        <article class="city-card"><div class="city-label">世界城市</div><div class="city-name" id="worldName"></div><div class="score" id="worldScore"></div><p id="worldWhy"></p></article>
+      </div>
+      <div class="evidence"><h3 id="evidenceTitle" style="margin-top:0"></h3><ul id="evidenceList"></ul><p class="source-note" id="factNote"></p></div>
+      <div class="wednesday"><h3>如果住在那里，一个普通星期三</h3><p id="wednesdayText"></p></div>
+      <div class="quote" id="quote"></div>
+      <p class="disclaimer">本结果基于固定的趣味生活方式算法生成，不代表心理测评、移居建议或真实命理结论。签证、就业、房租、天气与个人情况仍需单独判断。</p>
+      <div class="actions"><button class="button" onclick="window.print()">保存这份结果</button><button class="button secondary" id="restart">重新测试</button></div>
+    </div>
+  </section>
+</main>
+<script>
+const dims=['S','X','P','A','F','H','C','N'];
+const q=[
+ ['周六没有安排，你通常会把自己放进哪种地方？',['家附近，慢慢吃饭、逛超市，天黑前回家','朋友喊一声就出门，去哪都行','去一个没去过的街区，走到哪算哪','把拖了很久的事办完，晚上再奖励自己'],[['A',2],['H',1],['T',1]],[['S',2],['H',1],['R',1]],[['X',2],['F',1],['W',1]],[['P',2],['F',1],['J',1]]],
+ ['刚搬到一个新地方，你会先去找：',['菜市场、便利店、药店和好吃的小店','能看展、听现场、逛市集的地方','地铁站、健身房和最快的通勤路线','一条适合散步，最好还能看见树或水的路'],[['H',2],['A',1],['T',1]],[['C',2],['X',1],['R',1]],[['P',2],['A',1],['J',1]],[['N',2],['C',1],['W',1]]],
+ ['晚上九点，朋友突然发来消息：“出来坐坐吗？”',['走啊，正好不想这么早回家','看地点，太远太吵就算了','今天不了，我想一个人待着','可以，但更想找个能好好说话的地方'],[['S',2],['F',1],['R',1]],[['A',1],['F',1],['J',1]],[['S',-2],['F',2],['U',1]],[['H',2],['C',1],['T',1]]],
+ ['连下三天小雨，原定的安排也被打乱了。你会：',['明显烦躁，只想快点放晴','换个室内去处，别浪费这一天','干脆放慢一点，雨天也有雨天的过法','有点想出门走走，看看雨里的街道'],[['A',1],['P',1],['J',1]],[['P',1],['A',1],['T',1]],[['N',1],['A',1],['U',1]],[['N',2],['X',1],['U',2]]],
+ ['你在陌生地方走错了路，附近也没什么熟人。你更像：',['先把导航研究明白，尽快回到原计划','问路边的人，说不定还能得到一点本地建议','不急，顺着眼前好看的路再走一会儿','先找地方坐下，喝杯东西再说'],[['P',2],['A',1],['J',1]],[['S',1],['H',1],['R',1]],[['X',3],['F',1],['W',1]],[['A',1],['F',2],['U',1]]],
+ ['看房时，哪一点最容易让你当场心动？',['楼下什么都有，晚回家也不慌','窗外有树、有光，走路能到公园或水边','离上班近，省下来的时间比什么都值','房子本身有点意思，周边也不千篇一律'],[['H',2],['A',1],['T',1]],[['N',3],['W',2]],[['P',3],['J',2]],[['C',3],['F',1],['U',1]]],
+ ['你喜欢的忙，更接近哪一种？',['每天事情不少，但下班后还能过自己的生活','忙一点没关系，只要能明显感觉自己在进步','平时不必太赶，偶尔忙起来反而有意思','日程别太满，留点空白我才舒服'],[['A',2],['F',1],['T',1]],[['P',3],['X',1],['J',2]],[['S',1],['A',1],['R',1]],[['P',-2],['F',2],['U',1]]],
+ ['到了一个完全陌生的环境，你一般会：',['很快主动认识人，先让自己热闹起来','先观察一阵，遇到合得来的人再靠近','不急着融入，先把自己的生活安顿好','会刻意去试新东西，认识谁反而是其次'],[['S',3],['X',1],['R',2]],[['A',1],['H',1],['T',1]],[['F',2],['A',1],['U',1]],[['X',3],['F',1],['W',1]]],
+ ['逛街时，哪类地方最容易让你放慢脚步？',['老房子、旧书店、博物馆附近','小众买手店、设计店和新开的展','夜市、路边摊、有人聊天的地方','干净利落的商场和现代建筑'],[['C',3],['A',1],['T',1]],[['C',3],['X',1],['J',1]],[['S',2],['H',2],['R',2]],[['C',2],['P',1],['J',2]]],
+ ['你理想中的朋友关系是：',['一群人常常见面，生活里总有热闹','两三个很懂我的人就够了','不必频繁联系，但关键时刻能互相出现','各自有自己的生活，见面时总能带来新东西'],[['S',3],['H',2],['R',2]],[['S',-1],['H',2],['T',1]],[['F',2],['H',1],['U',1]],[['F',3],['X',1],['J',1]]],
+ ['下面哪一种画面最容易让你觉得“今天也还不错”？',['傍晚有风的海边，什么都不做也行','山路、树影和一点雾气','天黑后亮起来的高楼和街道','有四季变化的公园、河边和旧街'],[['N',3],['U',3]],[['N',3],['W',3]],[['P',1],['S',1],['R',2]],[['N',2],['A',1],['W',1],['T',1]]],
+ ['心情不好时，你最需要的是：',['一个人走很久，不必解释','找熟人吃饭，把话说出来','去一个没去过的地方，换个脑子','回家把房间和待办重新理顺'],[['F',2],['N',1],['U',2]],[['S',2],['H',2],['R',1]],[['X',3],['F',1],['W',1]],[['A',3],['P',1],['J',2]]],
+ ['如果有一份不错的机会，需要你去一座陌生城市三年：',['会想去，陌生本身就值得试一次','先算清楚收入、房租、通勤和发展','要看那里能不能让我过得舒服、安稳','如果那座城市的气质很吸引我，会认真考虑'],[['X',3],['F',1],['R',1]],[['P',1],['A',2],['J',1]],[['A',3],['H',1],['T',2]],[['C',3],['X',1],['U',1]]],
+ ['你最喜欢的夜晚，大概是：',['看完演出或展览，慢慢走去吃点东西','一个人去便利店买夜宵，再回家看剧','夜市、小酒馆，听周围的人说话','忙完一天，回家路上还觉得自己今天没白过'],[['C',3],['S',1],['R',1]],[['S',-2],['F',2],['U',1]],[['S',2],['H',2],['R',2]],[['P',3],['C',1],['J',2]]],
+ ['“稳定”这两个字，对你来说更像：',['有熟悉的人和地方，日子不用总重新开始','收入、住处、生活节奏都大致可预期','我有随时离开、重新选择的底气','不管外面怎么变，我都能守住自己的节奏'],[['H',3],['A',2],['T',2]],[['A',3],['P',1],['J',1]],[['F',3],['X',1],['U',1]],[['F',2],['A',1],['J',1]]],
+ ['如果一年里只能保留一种天气，你会选：',['晴天多、空气干一点，出门就有精神','湿润一点没关系，植物和雨后的味道都很好','四季分明，冷和热都算生活的一部分','别太极端，温度舒服最重要'],[['N',2],['P',1],['R',2]],[['N',3],['W',2],['U',1]],[['N',2],['A',1],['W',1],['T',1]],[['A',2],['N',1],['T',1]]],
+ ['你希望自己在一座城市里拥有哪种小本事？',['总能找到一家不排队又好吃的小店','知道哪里适合一个人安静待半天','能自然加入陌生人的热闹','总能比别人早一点发现新地方'],[['H',3],['A',1],['T',1]],[['S',-2],['F',2],['U',1]],[['S',3],['X',1],['R',2]],[['X',3],['C',2],['W',1]]],
+ ['想象三年后的一个普通周三，你更想看见：',['工作不算轻松，但下班后仍有朋友和自己的生活','有固定的家、固定的路线，日子很稳','这几年去过不少地方，生活一直有新章节','住在一个让自己愿意出门的地方，慢慢把日子过顺眼'],[['P',2],['S',2],['H',1],['R',1]],[['A',3],['H',2],['T',2]],[['X',3],['F',2],['U',1]],[['C',3],['F',1],['W',1]]]
+];
+const guards=[['rain','阴雨多、日照少'],['humid','闷热潮湿'],['cold','冬天太冷、天黑太早'],['crowded','太吵、太挤，没有安静空间'],['commute','通勤太长，日常总在赶路'],['cost','房租和生活成本压力大'],['distant','很难建立关系，总像局外人'],['slow','节奏太慢，机会和新鲜感不够'],['nature','自然太少，山海绿地难接近'],['culture','文化娱乐太少，休息日不知道去哪'],['outsider','融入门槛高，对外来者不友好'],['boundary','熟人社会太强，个人边界被打扰']];
+const cities={
+ china:[
+  ['成都',[60,55,38,68,60,78,72,58],['rain:high','humid:med','slow:med'], '烟火、松弛和文化供给都对你胃口；它适合把日子过得有来有往。'],['杭州',[52,62,65,55,62,55,75,77],['cost:high','commute:med'], '你会喜欢这里把自然、审美和向前走的劲儿放在同一张生活里。'],['厦门',[50,55,42,66,64,59,70,80],['humid:high','slow:med','cost:med'], '这里给你的不是热闹，而是每天都能呼吸到一点空白。'],['广州',[72,70,67,56,68,76,72,50],['humid:high','commute:med'], '你能在这里遇到人，也能用自己的方式过得很实在。'],['深圳',[68,78,82,43,75,48,68,52],['cost:high','crowded:med','humid:high'], '它更像一段主动出发的日子：快，但自由，也有很强的向前感。','气候数据：深圳 1991–2020 年常年平均日照为 1853 小时、年降水量 1932.9 毫米；86% 的雨量集中在 4–9 月。它不是“天天晴”，而是长夏、日照充足且湿热多雨的海滨城市。'],['苏州',[42,45,52,70,55,66,76,65],['slow:med','outsider:low'], '你会喜欢它细细铺开的秩序、审美和不必太喧哗的日常。'],['南京',[54,55,58,65,55,67,82,60],['humid:med'], '历史、文化和日常感不会互相打架，适合慢慢把生活过深。'],['重庆',[70,66,63,56,58,77,69,68],['humid:high','crowded:high','commute:high'], '它会给你很多真实的人气和夜晚，但也要求你接得住它的密度。'],['青岛',[50,52,48,70,57,60,65,77],['cold:med','slow:low'], '海风和稳定感都在，适合不想一直被生活催着跑的人。'],['长沙',[70,60,59,61,60,79,64,45],['humid:high'], '日常热闹却不生硬，尤其适合喜欢人间烟火的人。'],['昆明',[45,56,35,70,68,55,60,80],['slow:high'], '气候和自然会让你松下来，适合把自己重新养一养。'],['大理',[36,55,22,55,80,45,72,90],['slow:high','culture:low','outsider:med'], '山和湖会替你留出很多空间；更像一场生活方式选择。']
+ ],
+ world:[
+  ['巴黎',[70,75,70,45,68,48,95,42],['cost:high','crowded:med','outsider:med'], '这里给你的是密集的文化和表达欲，也要求你接受一点复杂与锋利。'],['伦敦',[72,78,76,45,76,46,90,50],['cost:high','rain:high','commute:high'], '你可以在这里保持不同，也总能找到新的展览、音乐和人。'],['巴塞罗那',[68,68,52,53,70,63,85,78],['cost:high','humid:med','crowded:med'], '海边、设计和晚间生活，会把你的感官慢慢打开。'],['东京',[55,72,82,68,55,60,89,48],['cost:high','crowded:high','commute:high'], '秩序和文化供给都很强，适合愿意认真把生活过出细节的人。'],['京都',[40,52,38,73,55,58,92,70],['slow:med','culture:low'], '它给你季节、手艺和安静的美，适合不急着证明什么的时候。'],['墨尔本',[56,69,58,63,72,58,84,67],['cost:high'], '你会喜欢这里随性但不松散的文化日常，生活可以很有自己的节拍。'],['哥本哈根',[48,57,55,75,70,55,78,65],['cost:high','cold:high','distant:med'], '它把秩序和个人空间照顾得很好，也适合想把日常过得干净的人。'],['里斯本',[62,65,45,55,72,55,74,75],['cost:high','slow:med'], '海风、坡道和慢一点的街头，会让你愿意把时间花在生活上。'],['阿姆斯特丹',[66,73,63,57,78,45,81,62],['cost:high','rain:med','outsider:med'], '自由和边界感能在这里并存，适合不想按同一种方式活的人。'],['温哥华',[45,65,46,58,75,42,72,90],['cost:high','rain:high','distant:med'], '山海离日常很近，适合需要自然和清晰个人空间的人。'],['纽约',[82,85,88,38,85,42,96,38],['cost:high','crowded:high','commute:high'], '它会放大你的野心和好奇心，也不会替你把生活过轻松。'],['罗马',[68,58,42,55,64,71,95,65],['outsider:med','commute:med'], '在这里，历史、食物和街道都很具体，生活更像一场长谈。']
+ ]
+};
+const climateFacts={
+ '成都':'常年气候约：日照 1,230 小时／年，降水 950 毫米／年。盆地多云雾，夏季湿热；如果你把“日照少”设成红线，它不会进入第一推荐。',
+ '杭州':'常年气候约：日照 1,784 小时／年，降水 1,419 毫米／年。梅雨和台风雨会影响体感，适合接受四季湿润的人。',
+ '厦门':'常年气候约：日照约 2,030 小时／年，降水约 1,350 毫米／年。海边日照条件不错，但夏秋需面对湿热、强降雨和台风影响。',
+ '广州':'常年气候约：日照约 1,628 小时／年，降水约 1,736 毫米／年。长夏湿热，雨季感很强；不适合把闷热潮湿列为红线的人。',
+ '深圳':'气候数据：深圳 1991–2020 年常年平均日照为 1,853 小时、年降水量 1,932.9 毫米；86% 的雨量集中在 4–9 月。它不是“天天晴”，而是长夏、日照充足且湿热多雨的海滨城市。',
+ '苏州':'常年气候约：日照 1,787 小时／年，降水 1,141 毫米／年，平均雨日约 125 天。梅雨季与台风季会明显影响体感。',
+ '南京':'常年气候约：年降水 1,144 毫米，年降水日约 113 天；四季分明，夏热冬冷，季节感是它生活体验的一部分。',
+ '重庆':'常年气候约：日照 1,156 小时／年，降水 1,137 毫米／年，相对湿度约 80%。多云雾、日照少是实际生活条件，不只是城市滤镜。',
+ '青岛':'常年气候约：日照 2,500 小时／年，降水约 660 毫米／年。海风与冬季低温都很有存在感，适合喜欢清爽、能接受冬天的人。',
+ '长沙':'常年气候约：日照 1,542 小时／年，降水 1,451 毫米／年，年雨日约 151 天。湿热和多雨是生活体验的一部分。',
+ '昆明':'常年气候约：日照约 2,200 小时／年，降水约 1,000 毫米／年。高原紫外线强、昼夜温差明显，气候舒适不等于不需要防晒保暖。',
+ '大理':'官方资料显示：年日照约 2,217 小时，年降水 1,038 毫米，年均温 15.4℃。干湿季分明，风和紫外线都比“慢生活”标签更真实。',
+ '巴黎':'常年气候约：日照 1,610 小时／年，降水约 637 毫米／年。降雨较分散，冬季日照弱；住房成本和法语环境需单独评估。',
+ '伦敦':'常年气候约：日照 1,633 小时／年，降水约 600 毫米／年。不是暴雨型城市，但阴天与冬季早黑会真实影响长期体感。',
+ '巴塞罗那':'官方 2024 城市数据：日照约 2,710 小时／年、年降水约 661 毫米。海边与强日照是优势，但夏季高温和旅游密度也是真实成本。',
+ '东京':'日本气象厅 1991–2020 常年值：日照约 1,927 小时／年。夏季湿热、多雨；高密度通勤和居住面积同样应纳入长期判断。',
+ '京都':'常年气候约：日照约 1,800 小时／年，降水约 1,490 毫米／年。四季很有画面，但夏季闷热、梅雨和旅游旺季也会改变日常。',
+ '墨尔本':'近 30 年常年气候资料显示：年降水约 603 毫米、年均温约 15.9℃。天气变化快、季节反差明显，不能只按“宜居”想象。',
+ '哥本哈根':'常年气候约：日照 1,629 小时／年，年降水约 604 毫米。真正需要衡量的是漫长冬季、短日照和高生活成本。',
+ '里斯本':'常年气候约：日照 2,799 小时／年，年降水约 774 毫米。晴天多，但夏季热、坡道多，住房压力也不能忽略。',
+ '阿姆斯特丹':'常年气候约：日照 1,662 小时／年，年降水约 840 毫米。多雨多风的体感和住房紧张，是“自由感”之外的现实。',
+ '温哥华':'加拿大气候常年值：日照约 1,938 小时／年；年均温约 10.5℃。秋冬湿润、住房成本高，自然资源很强但并非总是晴朗。',
+ '纽约':'常年气候约：日照约 2,535 小时／年，年降水约 1,268 毫米。四季和文化密度都强，同样强的是房租、通勤和节奏。',
+ '罗马':'常年气候约：日照约 2,473 小时／年，年降水约 798 毫米。夏季炎热干燥、冬季较温和，旅游中心与真实居住区体验差异很大。'
+};
+let index=0,answers=Array(q.length).fill(null),chosen=[];
+const byId=id=>document.getElementById(id); const screens=['intro','quiz','guardrails','result'];
+function show(id){screens.forEach(x=>byId(x).classList.toggle('active',x===id));if(id==='intro')byId('intro').style.display='grid';else byId('intro').style.display='none';window.scrollTo(0,0)}
+function renderQuestion(){const item=q[index];byId('count').textContent=`${index+1} / ${q.length}`;byId('bar').style.width=`${((index+1)/q.length)*100}%`;byId('qnumber').textContent=`LIFE MOMENT ${String(index+1).padStart(2,'0')}`;byId('question').textContent=item[0];byId('options').innerHTML=item[1].map((t,i)=>`<button class="option ${answers[index]===i?'selected':''}" data-i="${i}"><span class="letter">${'ABCD'[i]}</span>${t}</button>`).join('');document.querySelectorAll('.option').forEach(b=>b.onclick=()=>{answers[index]=+b.dataset.i;if(index<q.length-1){index++;renderQuestion()}else{renderGuards();show('guardrails')}});byId('back').style.visibility=index?'visible':'hidden'}
+function renderGuards(){byId('guardGrid').innerHTML=guards.map(([key,label])=>`<button type="button" class="guard ${chosen.includes(key)?'checked':''}" data-key="${key}">${label}<small>${chosen.includes(key)?'已选择':'点击选择'}</small></button>`).join('');document.querySelectorAll('.guard').forEach(b=>b.onclick=()=>{const key=b.dataset.key;if(chosen.includes(key))chosen=chosen.filter(x=>x!==key);else if(chosen.length<3)chosen.push(key);else{byId('guardWarning').textContent='最多选 3 项，把最不能将就的留给自己。';return}byId('guardWarning').textContent='';renderGuards()});byId('severity').classList.toggle('show',chosen.length>0);byId('severity').innerHTML=chosen.length?'<strong>这些对你来说是：</strong>'+chosen.map(key=>`<label><input type="radio" name="sev-${key}" value="soft" checked> 不喜欢，但可以适应　 <input type="radio" name="sev-${key}" value="hard"> 长期这样，我会不想住下去</label>`).join(''):''}
+function userProfile(){let v={S:50,X:50,P:50,A:50,F:50,H:50,C:50,N:50},e={W:0,R:0,T:0,J:0,U:0};answers.forEach((a,i)=>q[i][2+a].forEach(([k,n])=>{if(k in v)v[k]+=n;else e[k]+=n}));dims.forEach(k=>v[k]=Math.max(20,Math.min(80,v[k])));return{v,e}}
+function rank(group,profile){let hard={};chosen.forEach(key=>{const r=document.querySelector(`input[name="sev-${key}"]:checked`);hard[key]=r?r.value:'soft'});let list=cities[group].map(c=>{let diff=dims.reduce((sum,d)=>sum+Math.abs(profile.v[d]-c[1][dims.indexOf(d)])*({P:1.6,A:1.5,S:1.4,N:1.4,X:1.2,F:1.1,C:1,H:.8}[d]),0);let score=100-diff*.19,excluded=false,penalty=0;c[2].forEach(s=>{let [key,level]=s.split(':');if(!hard[key])return;let val={low:1,med:5,high:10}[level];if(hard[key]==='hard'&&(level==='med'||level==='high'))excluded=true;else penalty+=hard[key]==='soft'?val:(level==='low'?3:0)});return{c,score:Math.round(Math.max(1,score-penalty)),excluded}});let candidates=list.filter(x=>!x.excluded);return(candidates.length?candidates:list).sort((a,b)=>b.score-a.score)[0]}
+const names={S:'社交热度',X:'新鲜探索',P:'生活节奏',A:'稳定安心',F:'个人空间',H:'烟火归属',C:'文化审美',N:'自然呼吸'};
+const poles={S:['独处充电','人群充电'],X:['熟悉路线','新鲜探索'],P:['留白松弛','高效向前'],A:['变化也行','稳定安心'],F:['亲密陪伴','个人空间'],H:['保持距离','烟火归属'],C:['实用日常','文化审美'],N:['城市密度','自然呼吸']};
+const pct=v=>Math.round((v-20)/.6);
+function weatherPreference(){const rain=[90,70,40,15][answers[3]], climate=[90,20,50,60][answers[15]];let sun=Math.round((rain+climate)/2);if(chosen.includes('rain'))sun=Math.max(sun,document.querySelector('input[name="sev-rain"]:checked')?.value==='hard'?92:80);return Math.min(100,Math.max(0,sun))}
+function cityReason(city,profile){const matches=dims.map((d,i)=>[d,Math.abs(profile.v[d]-city[1][i])]).sort((a,b)=>a[1]-b[1]).slice(0,2).map(x=>names[x[0]]);return `${city[3]} 你的${matches.join('和')}，和这座城市最接近。`}
+function evidence(city,profile){const fits=dims.map((d,i)=>[d,Math.abs(profile.v[d]-city[1][i]),city[1][i]]).sort((a,b)=>a[1]-b[1]).slice(0,3);return fits.map(([d,diff,cityValue])=>`你在「${names[d]}」上的倾向是 ${pct(profile.v[d])}%；${city[0]}的城市库标签是 ${cityValue}/100，差距 ${Math.round(diff)} 分。`).concat(chosen.length?[`你选过的避雷项已先参与筛选；${city[0]}没有触发你设为“长期住会不开心”的高风险条件。`]:['你没有设置硬性避雷项，因此本次按生活偏好与城市标签的接近程度排序。'])}
+function result(){const profile=userProfile(),cn=rank('china',profile),world=rank('world',profile);const ordered=dims.map(k=>[k,profile.v[k]]).sort((a,b)=>b[1]-a[1]);const style=ordered[0][0]==='C'||ordered[0][0]==='N'?'感受派生活家':ordered[0][0]==='P'||ordered[0][0]==='X'?'会往新地方走的人':'把日子过暖的人';const element=Object.entries(profile.e).sort((a,b)=>b[1]-a[1]).slice(0,2).map(x=>({W:'木',R:'火',T:'土',J:'金',U:'水'}[x[0]]));const sun=weatherPreference();byId('archetype').textContent=style;byId('lead').textContent=`你不只是想换一座城市；你在找一个既能让自己舒服，又不必把自己缩小的地方。${element.join('')}意象会让你的生活更接近你自己。`;byId('need').textContent=`你比较看重${names[ordered[0][0]]}和${names[ordered[1][0]]}。对你来说，好的城市不是参数漂亮，而是下班以后，你还愿意出门走一小段路。`;byId('keywords').innerHTML=ordered.slice(0,4).map(x=>`<span>${names[x[0]]}</span>`).join('');byId('scales').innerHTML=dims.map(d=>{const right=pct(profile.v[d]),left=100-right;return `<div><div class="scale-head"><span>${poles[d][0]} ${left}%</span><b>${names[d]}</b><span>${poles[d][1]} ${right}%</span></div><div class="scale-bar" style="--right:${right}%"></div></div>`}).join('');byId('weatherNote').textContent=`天气倾向：晴朗、干爽 ${sun}%　—　湿润、雨天 ${100-sun}%（这是你的环境偏好，不是天气预报）。`;byId('cnName').textContent=cn.c[0];byId('cnScore').textContent=`趣味适配度 ${cn.score}%`;byId('cnWhy').textContent=cityReason(cn.c,profile);byId('worldName').textContent=world.c[0];byId('worldScore').textContent=`趣味适配度 ${world.score}%`;byId('worldWhy').textContent=cityReason(world.c,profile);byId('evidenceTitle').textContent=`为什么是 ${cn.c[0]}`;byId('evidenceList').innerHTML=evidence(cn.c,profile).map(x=>`<li>${x}</li>`).join('');byId('factNote').textContent=`${climateFacts[cn.c[0]]} 数据口径：以城市官方气象资料、国家气象机构或 30 年气候常年值为主；站点、统计期不同，数值仅作生活方式比较。`;byId('wednesdayText').textContent=`在${cn.c[0]}，你会把一天过得不那么赶：做完该做的事，去一家顺路的小店，或者绕一点路回家。你不用每天都活得很精彩，但会慢慢认出，什么样的日常才真的让自己松下来。`;byId('quote').textContent=`“你要找的不是一座完美城市，而是一种不必违背自己的生活。”`;show('result')}
+byId('start').onclick=()=>{show('quiz');renderQuestion()};byId('back').onclick=()=>{if(index){index--;renderQuestion()}};byId('guardBack').onclick=()=>{index=q.length-1;show('quiz');renderQuestion()};byId('finish').onclick=result;byId('restart').onclick=()=>{index=0;answers=Array(q.length).fill(null);chosen=[];show('intro')};
+</script>
+</body>
+</html>
